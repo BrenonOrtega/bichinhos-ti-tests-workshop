@@ -1,0 +1,1 @@
+public record IncomeCalculation(decimal TotalTaxes, decimal GrossIncome, decimal NetValue, string Country);
