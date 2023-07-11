@@ -5,11 +5,10 @@ namespace HackerRank.Tax.Liability.App;
 
 public class Calculator : ICalculatorApp
 {
-    static readonly IEnumerable<Type> calculatorImplementations = Assembly
+    static readonly IEnumerable<Type?> calculatorImplementations = Assembly
         .GetExecutingAssembly()
-        .GetTypes()
-        .Where(IsImplementationOf<ILocationTaxCalculator>);
-
+        .GetImplementationsOf<ILocationTaxCalculator>();
+        
     public async Task<IncomeCalculation> Calculate(string country, decimal hourlyRate, int hours)
     {
         ILocationTaxCalculator calculator = GetCalculatorInstance(country);
@@ -31,9 +30,6 @@ public class Calculator : ICalculatorApp
         
         return type;
     }
-
-    private static bool IsImplementationOf<T>(Type type)
-        => type.IsAssignableTo(typeof(T)) && type.IsClass && type.IsAbstract is false;
 
     private static Func<Type, bool> IsCalculatorFor(string country)
         => type => type.Name.ToUpper().StartsWith(country?.ToUpper() ?? "");
