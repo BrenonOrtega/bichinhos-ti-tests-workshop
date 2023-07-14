@@ -5,22 +5,22 @@ namespace HackerRank.Tax.Liability.App;
 
 public class Calculator : ICalculatorApp
 {
-    static readonly IEnumerable<Type?> calculatorImplementations = Assembly
-        .GetExecutingAssembly()
-        .GetImplementationsOf<ILocationTaxCalculator>();
-        
-    public async Task<IncomeCalculation> Calculate(string country, decimal hourlyRate, int hours)
-    {
-        ILocationTaxCalculator calculator = GetCalculatorInstance(country);
-        var calculation = calculator.Calculate(hourlyRate, hours);
-        return calculation;
-    }
+        static readonly IEnumerable<Type?> calculatorImplementations = Assembly
+            .GetExecutingAssembly()
+            .GetImplementationsOf<ILocationTaxCalculator>();
+            
+        public async Task<IncomeCalculation> Calculate(string country, decimal hourlyRate, int hours)
+        {
+            ILocationTaxCalculator calculator = GetCalculatorInstance(country);
+            var calculation = calculator.Calculate(hourlyRate, hours);
+            return calculation;
+        }
 
-    private static ILocationTaxCalculator GetCalculatorInstance(string country)
-    {
-        var calculatorType = GetLocationCalculatorType(country);
-        return Activator.CreateInstance(calculatorType) as ILocationTaxCalculator;
-    }
+        private static ILocationTaxCalculator GetCalculatorInstance(string country)
+        {
+            var calculatorType = GetLocationCalculatorType(country);
+            return Activator.CreateInstance(calculatorType) as ILocationTaxCalculator;
+        }
 
     private static Type GetLocationCalculatorType(string country)
     {
