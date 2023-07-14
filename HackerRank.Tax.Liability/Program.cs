@@ -56,6 +56,8 @@ public class Program
 
         app.MapControllers();
 
+        app.UseHttpLogging();
+
         app.Run();
     }
 }
