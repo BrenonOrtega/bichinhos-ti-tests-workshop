@@ -9,7 +9,7 @@ public class Program
     public static IServiceProvider ServiceProvider { get; private set; }
     public static async Task Main(string[] args)
     {
-        if (args?.Any(x => x == "console") ?? false)
+        if (args?.Any(x => x == "--console") ?? false)
             await ConsoleApplication.Run();
 
         else
