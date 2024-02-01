@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{70E5A60B-4AFE-45CC-9221-2EE05F745678}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank.Tax.Liability", "src\HackerRank.Tax.Liability\HackerRank.Tax.Liability.csproj", "{50FE5ECA-5BBA-488A-8446-518A0D106C19}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D398ECDE-979F-4206-96BE-AAEF421C1DC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank.Tax.Liability.UnitTests", "tests\HackerRank.Tax.Liability.UnitTests\HackerRank.Tax.Liability.UnitTests.csproj", "{0600888C-1D17-4E65-9AE8-AB555AC0ED6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50FE5ECA-5BBA-488A-8446-518A0D106C19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50FE5ECA-5BBA-488A-8446-518A0D106C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50FE5ECA-5BBA-488A-8446-518A0D106C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50FE5ECA-5BBA-488A-8446-518A0D106C19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0600888C-1D17-4E65-9AE8-AB555AC0ED6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0600888C-1D17-4E65-9AE8-AB555AC0ED6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0600888C-1D17-4E65-9AE8-AB555AC0ED6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0600888C-1D17-4E65-9AE8-AB555AC0ED6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{50FE5ECA-5BBA-488A-8446-518A0D106C19} = {70E5A60B-4AFE-45CC-9221-2EE05F745678}
+		{0600888C-1D17-4E65-9AE8-AB555AC0ED6F} = {D398ECDE-979F-4206-96BE-AAEF421C1DC3}
+	EndGlobalSection
+EndGlobal

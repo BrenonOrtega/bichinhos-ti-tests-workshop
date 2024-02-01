@@ -6,7 +6,7 @@ public static class ReflectionExtensions
         => assembly.GetTypes().GetImplementationsOf<TInterface>();
 
     public static IEnumerable<Type?> GetImplementationsOf<TInterface>(this IEnumerable<Type> types) 
-        => types.Where(IsImplementationOf<ILocationTaxCalculator>);
+        => types.Where(IsImplementationOf<TInterface>);
 
     public static bool IsImplementationOf<T>(this Type type)
         => type.IsAssignableTo(typeof(T)) && type.IsClass && type.IsAbstract is false;

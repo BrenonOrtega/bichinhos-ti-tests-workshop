@@ -1,6 +1,6 @@
-class ItalyTaxCalculator : BaseTaxCalculator
+class BrazilTaxCalculator : BaseTaxCalculator
 {
-    protected override decimal Calculate(decimal total) => total switch
+    protected override async Task<decimal> Calculate(decimal total) => total switch
     {
         <= 15000 => total * 0.23m,
         <= 28000 => (total - 15000) * 0.27m + 15000 * 0.23m,

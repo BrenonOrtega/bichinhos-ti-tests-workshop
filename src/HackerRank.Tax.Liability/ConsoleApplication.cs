@@ -1,3 +1,4 @@
+using System.Reflection;
 using HackerRank.Tax.Liability.App;
 using HackerRank.Tax.Liability.Extensions;
 using HackerRank.Tax.Liability.Infrastructure;
@@ -20,7 +21,7 @@ public class ConsoleApplication
 
     public static ICalculatorApp GetAppWithoutDependencyInjectionContainer()
     {
-        var originalCalculator = new Calculator();
+        var originalCalculator = new CalculatorWithoutDI();
         var webhookRepo = new WebhookAddressRepository();
         var decoratedCalculator = new CalculatorWithPostWebhook(originalCalculator, webhookRepo);
 
@@ -29,7 +30,7 @@ public class ConsoleApplication
 
     public static async Task Run()
     {
-        var referenceCountry = GetInput("Input the desired country: Ireland | Germany | Italy");
+        var referenceCountry = GetInput($"Input the desired country: {GetExistingCalculators()}");
         var hourlyRate = TryGetDecimal("What is the hourly rate of the worker? (enter only numbers please).");
         var workedHours = TryGetDecimal("How many hours have this employee worked? (enter only numbers).");
 
@@ -39,8 +40,16 @@ public class ConsoleApplication
         WriteTaxOutput(referenceCountry, hourlyRate, workedHours, calculation);
     }
 
-    private static void
-    WriteTaxOutput(string referenceCountry, decimal hourlyRate, decimal workedHours, IncomeCalculation calculation)
+    private static string GetExistingCalculators()
+    {
+        var names = Assembly.GetExecutingAssembly()
+            .GetTypes().GetImplementationsOf<ILocationTaxCalculator>()
+            .Select(type => type.Name.Replace("TaxCalculator", ""));
+
+        return names.Aggregate("", (initial, actual) => $"{initial} | {actual}");
+    }
+
+    private static void WriteTaxOutput(string referenceCountry, decimal hourlyRate, decimal workedHours, IncomeCalculation calculation)
     {
         Console.WriteLine($"The tax liability for {referenceCountry}.");
         Console.WriteLine($"Hourly rate of {hourlyRate:C2}.");

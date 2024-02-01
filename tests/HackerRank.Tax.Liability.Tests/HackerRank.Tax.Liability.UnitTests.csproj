@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
-    <RootNamespace>HackerRank.Tax.Liability.Tests</RootNamespace>
+    <RootNamespace>HackerRank.Tax.Liability.UnitTests</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 
@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../HackerRank.Tax.Liability/HackerRank.Tax.Liability.csproj" />
+    <ProjectReference Include="../../src/HackerRank.Tax.Liability/HackerRank.Tax.Liability.csproj" />
   </ItemGroup>
 
 </Project>

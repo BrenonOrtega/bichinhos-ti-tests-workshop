@@ -36,7 +36,6 @@ public class Program
 
         app.UseHttpLogging();
 
-
         app.Run();
     }
 
