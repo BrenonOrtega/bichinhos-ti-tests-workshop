@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D398ECDE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank.Tax.Liability.UnitTests", "tests\HackerRank.Tax.Liability.UnitTests\HackerRank.Tax.Liability.UnitTests.csproj", "{0600888C-1D17-4E65-9AE8-AB555AC0ED6F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HackerRank.Tax.Liability.IntegrationTests", "tests\HackerRank.Tax.Liability.IntegrationTests\HackerRank.Tax.Liability.IntegrationTests.csproj", "{B1B8FDE5-793A-4488-8D29-5215BFF65FA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,9 +30,14 @@ Global
 		{0600888C-1D17-4E65-9AE8-AB555AC0ED6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0600888C-1D17-4E65-9AE8-AB555AC0ED6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0600888C-1D17-4E65-9AE8-AB555AC0ED6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1B8FDE5-793A-4488-8D29-5215BFF65FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1B8FDE5-793A-4488-8D29-5215BFF65FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1B8FDE5-793A-4488-8D29-5215BFF65FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1B8FDE5-793A-4488-8D29-5215BFF65FA6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{50FE5ECA-5BBA-488A-8446-518A0D106C19} = {70E5A60B-4AFE-45CC-9221-2EE05F745678}
 		{0600888C-1D17-4E65-9AE8-AB555AC0ED6F} = {D398ECDE-979F-4206-96BE-AAEF421C1DC3}
+		{B1B8FDE5-793A-4488-8D29-5215BFF65FA6} = {D398ECDE-979F-4206-96BE-AAEF421C1DC3}
 	EndGlobalSection
 EndGlobal

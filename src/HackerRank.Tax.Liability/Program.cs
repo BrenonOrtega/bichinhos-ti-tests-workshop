@@ -61,7 +61,8 @@ public class Program
         builder.Services.AddLogging();
         builder.Services.AddResponseCompression();
 
-        builder.Services.AddCalculatorServices();
+        builder.Services.AddCalculatorServices()
+            .AddExternalCalculators();
 
         var app = builder.Build();
         
